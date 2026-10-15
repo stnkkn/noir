@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOIR</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>NOIR</h1>
+    <p>MY LIFE MANAGEMENT</p>
+
+    <h2>MENU</h2>
+
+   
+
+<div class="menu">
+    <button class="menu-button" onclick="showPage('attendance', this)">欠席管理</button>
+    <button class="menu-button" onclick="showPage('money', this)">お金管理</button>
+    <button class="menu-button" onclick="showPage('todo', this)">ToDoリスト</button>
+</div>
+
+
+
+<div id="attendance">
+    <h2>欠席管理</h2>
+
+    <h3>教科を登録</h3>
+
+    <p>教科名</p>
+    <input type="text" id="subjectName" placeholder="例：英語">
+
+    <p>欠席上限</p>
+    <input type="number" id="absenceLimit" min="0" placeholder="例：6">
+
+    <p>欠席済み</p>
+    <input type="number" id="absenceCount" min="0" value="0">
+
+    <button onclick="addSubject()">教科を追加</button>
+
+    <div id="subjectList"></div>
+</div>
+
+</div>
+
+
+<div id="money" style="display:none;">
+    <h2>お金管理</h2>
+
+    <h3>収支の登録</h3>
+
+    <p>種類</p>
+    <select id="moneyType">
+        <option value="income">収入</option>
+        <option value="expense">支出</option>
+    </select>
+
+    <p>項目名</p>
+    <input type="text" id="moneyName" placeholder="例：アルバイト代">
+
+    <p>金額（円）</p>
+    <input type="number" id="moneyAmount" min="1" placeholder="例：60000">
+
+    <p>日付</p>
+    <input type="date" id="moneyDate">
+
+    <p>カテゴリー</p>
+    <select id="moneyCategory">
+        <option value="給料">給料</option>
+        <option value="食費">食費</option>
+        <option value="美容">美容</option>
+        <option value="交通費">交通費</option>
+        <option value="日用品">日用品</option>
+        <option value="娯楽">娯楽</option>
+        <option value="その他">その他</option>
+    </select>
+
+    <button onclick="addMoney()">登録する</button>
+
+    <h3>今月の収支</h3>
+    <p id="monthlyIncome">収入：0円</p>
+    <p id="monthlyExpense">支出：0円</p>
+    <p id="monthlyBalance">残高：0円</p>
+
+    <h3>履歴</h3>
+    <div id="moneyList"></div>
+</div>
+
+<div id="todo" style="display:none;">
+    <h2>ToDoリスト</h2>
+
+    <h3>タスクを登録</h3>
+
+    <p>タスク名</p>
+    <input type="text" id="todoName" placeholder="例：基本情報試験">
+
+    <p>期限</p>
+    <input type="date" id="todoDate">
+
+    <p>優先度</p>
+    <select id="todoPriority">
+        <option value="高">高</option>
+        <option value="中" selected>中</option>
+        <option value="低">低</option>
+    </select>
+
+    <button onclick="addTodo()">タスクを追加</button>
+
+    <h3>タスク一覧</h3>
+    <div id="todoList"></div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+
+/* ===== NOIR : Luxury Dark Design ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0b0d;
+    color: #eeeeef;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+    line-height: 1.7;
+}
+
+/* ロゴ */
+h1 {
+    font-size: 42px;
+    letter-spacing: 12px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+body > p {
+    color: #77777e;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 0;
+}
+
+/* 見出し */
+h2 {
+    font-size: 15px;
+    color: #c6c6cb;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin-top: 45px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #343438;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* メニュー・ボタン */
+button {
+    background: #e7e7e9;
+    color: #111113;
+    border: 1px solid #e7e7e9;
+    border-radius: 4px;
+    padding: 11px 18px;
+    margin: 5px 5px 5px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #aaaaaf;
+    border-color: #aaaaaf;
+}
+
+/* 説明文・カード */
+p {
+    color: #b4b4ba;
+    font-size: 13px;
+}
+
+.subject-card {
+    background: linear-gradient(145deg, #19191c, #111113);
+    border: 1px solid #37373c;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 16px;
+    overflow-wrap: anywhere;
+}
+
+.subject-card h3 {
+    color: #f4f4f5;
+}
+
+.subject-card p {
+    margin: 9px 0;
+}
+
+/* 入力欄 */
+input,
+select,
+textarea {
+    display: block;
+    background: #171719;
+    color: #eeeeef;
+    border: 1px solid #45454b;
+    border-radius: 4px;
+    padding: 12px;
+    margin: 6px 0 18px;
+    width: 100%;
+    max-width: 420px;
+    font-size: 14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #bcbcc4;
+}
+
+/* チェックボックス */
+input[type="checkbox"] {
+    display: inline-block;
+    width: auto;
+    accent-color: #d7d7dc;
+    margin: 0 8px 0 0;
+}
+
+/* 欠席マス */
+.absence-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 15px 0;
+}
+
+.absence-cell {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #77777e;
+    border-radius: 3px;
+}
+
+.absence-cell.used {
+    background: #e1e1e5;
+    border-color: #e1e1e5;
+}
+
+/* ToDoの期限表示 */
+.todo-alert {
+    color: #ff7777;
+    font-weight: bold;
+}
+
+.todo-soon {
+    color: #d6c28a;
+    font-weight: bold;
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 34px;
+        letter-spacing: 9px;
+    }
+
+    h2 {
+        margin-top: 32px;
+    }
+
+    button {
+        padding: 10px 13px;
+    }
+
+    .subject-card {
+        padding: 15px;
+    }
+}
+
+/* ナビゲーションメニュー */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #343438;
+}
+
+.menu-button {
+    background: transparent;
+    color: #929299;
+    border: 1px solid #39393f;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.menu-button:hover {
+    background: #202023;
+    color: #ffffff;
+    border-color: #77777e;
+}
+
+.menu-button.active {
+    background: #eeeeef;
+    color: #111113;
+    border-color: #eeeeef;
+}
